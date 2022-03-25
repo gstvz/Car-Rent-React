@@ -19,7 +19,7 @@ export const Card = ({ car }: CardProps) => {
           <S.Dot />
         </S.Options>
       </S.Header>
-      <S.CarPhoto src="https://i.ibb.co/vX5GtS9/Mask-Group-11.png" />
+      <S.CarPhoto src={car.thumbnail} />
       <S.CarPrice>
         <sup>$</sup>
         {car.price}
