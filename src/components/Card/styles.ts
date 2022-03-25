@@ -10,6 +10,11 @@ export const Card = styled.div`
   width: 26rem;
 `;
 
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 export const CarInfo = styled.div``;
 
 export const CarMake = styled.p`
@@ -24,6 +29,18 @@ export const CarModel = styled.p`
   font-size: 1.7rem;
   font-weight: ${({ theme }) => theme.fontWeights.light_300};
 `;
+
+export const Options = styled.div`
+  display: flex;
+  gap: 0.2rem;
+`
+
+export const Dot = styled.div`
+  background-color: ${({ theme }) => theme.colors.dot};
+  border-radius: 10px;
+  height: 0.5rem;
+  width: 0.5rem;
+`
 
 export const CarPhoto = styled.img`
   margin: 1.6rem auto;

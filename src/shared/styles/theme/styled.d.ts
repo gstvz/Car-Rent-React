@@ -9,6 +9,7 @@ declare module "styled-components" {
       input: string;
       text: string;
       secondary_text: string;
+      dot: string;
     };
     fontWeights: {
       light_300: string;

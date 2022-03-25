@@ -6,6 +6,7 @@ export const theme = {
     input: "#F3F1FC",
     text: "#313136",
     secondary_text: "#656469",
+    dot: "#C8C8CA"
   },
   fontWeights: {
     light_300: "300",
