@@ -1,9 +1,9 @@
-import { api } from "../";
+import { api } from "..";
 
 export async function getCars() {
   try {
-    const response = await api.get("db.json");
-    return response.data;
+    const { data } = await api.get("db.json");
+    return data;
   } catch (error) {
     console.log(error);
   }
