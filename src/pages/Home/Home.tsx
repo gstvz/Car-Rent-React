@@ -1,7 +1,10 @@
+import * as S from "./styles";
+import { Card } from "../../components/Card/Card"
+
 export const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <S.Main>
+      <Card />
+    </S.Main>
   )
 }
