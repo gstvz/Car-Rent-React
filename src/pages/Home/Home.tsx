@@ -1,14 +1,11 @@
 import * as S from "./styles";
-import { Card } from "../../components/Card/Card"
-import { getCars } from "../../shared/services/getCars/getCars";
+import { CarList } from "../../components/CarList/CarList";
 
 export const Home = () => {
-
-  getCars();
   
   return (
     <S.Main>
-      <Card />
+      <CarList />
     </S.Main>
   )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Card = styled.div`
+export const Card = styled.li`
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 20px;
   display: flex;
