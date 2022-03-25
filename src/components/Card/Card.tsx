@@ -1,12 +1,17 @@
+import { Car } from "../../shared/types/cars";
 import * as S from "./styles";
 
-export const Card = () => {
+type CardProps = {
+  car: Car;
+};
+
+export const Card = ({ car }: CardProps) => {
   return (
     <S.Card>
       <S.Header>
         <S.CarInfo>
-          <S.CarMake>Ferrari</S.CarMake>
-          <S.CarModel>CALIFORNIA</S.CarModel>
+          <S.CarMake>{car.make}</S.CarMake>
+          <S.CarModel>{car.model}</S.CarModel>
         </S.CarInfo>
         <S.Options>
           <S.Dot />
@@ -17,7 +22,7 @@ export const Card = () => {
       <S.CarPhoto src="https://i.ibb.co/vX5GtS9/Mask-Group-11.png" />
       <S.CarPrice>
         <sup>$</sup>
-        725
+        {car.price}
         <span>/day</span>
       </S.CarPrice>
     </S.Card>

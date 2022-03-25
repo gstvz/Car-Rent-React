@@ -6,9 +6,7 @@ export function getCarsData() {
     const { cars } = await getCars();
 
     dispatch(
-      carsActions.setCars({
-        cars: cars,
-      })
+      carsActions.setCars(cars)
     );
   };
 }
