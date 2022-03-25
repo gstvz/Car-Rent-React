@@ -5,7 +5,6 @@ export const Card = styled.div`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  height: 20rem;
   justify-content: space-between;
   padding: 1.5rem;
   width: 26rem;
@@ -27,7 +26,6 @@ export const CarModel = styled.p`
 `;
 
 export const CarPhoto = styled.img`
-  height: 6rem;
   margin: 1.6rem auto;
   width: 20rem;
 `;
