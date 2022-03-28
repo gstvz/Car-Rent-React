@@ -4,11 +4,12 @@ import { icon_arrow} from "@assets";
 type ButtonProps = {
   text: string;
   forward?: boolean;
+  onPress: () => void;
 };
 
-export const Button = ({ text, forward }: ButtonProps) => {
+export const Button = ({ text, forward, onPress }: ButtonProps) => {
   return (
-    <S.Button forward={forward}>
+    <S.Button forward={forward} onClick={onPress}>
       {forward ? (
         text
       ) : (

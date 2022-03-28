@@ -1,9 +1,11 @@
 import * as S from "./styles";
 import { useCars } from "@shared/hooks";
 import { Button } from "@components";
+import { useCarDetails } from "./useCarDetails";
 
 export const CarDetails = () => {
   const { cars } = useCars();
+  const [handleBackToCatalog, handleBookNow] = useCarDetails();
 
   return (
     <S.Container>
@@ -18,11 +20,11 @@ export const CarDetails = () => {
           </S.CarInfo>
         </S.CarHeader>
         <S.CarPhotoContainer>
-          <Button text="Back to catalog" />
+          <Button text="Back to catalog" onPress={handleBackToCatalog} />
           <S.CarPhoto src={cars[0]?.colors[0].photo} />
         </S.CarPhotoContainer>
         <S.ButtonContainer>
-          <Button text="Book now" forward />
+          <Button text="Book now" forward onPress={handleBookNow} />
         </S.ButtonContainer>
       </S.Car>
       <S.CarIdAndColor>
