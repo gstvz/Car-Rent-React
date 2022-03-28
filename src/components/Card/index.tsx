@@ -1,13 +1,16 @@
 import { Car } from "@shared/types";
 import * as S from "./styles";
+import { useHover } from "./useHover";
 
 type CardProps = {
   car: Car;
 };
 
 export const Card = ({ car }: CardProps) => {
+  const { isHovering, renderComponent } = useHover();
+
   return (
-    <S.Card>
+    <S.Card onMouseEnter={renderComponent} onMouseLeave={renderComponent}>
       <S.Header>
         <S.CarInfo>
           <S.CarMake>{car.make}</S.CarMake>
@@ -20,11 +23,14 @@ export const Card = ({ car }: CardProps) => {
         </S.Options>
       </S.Header>
       <S.CarPhoto src={car.thumbnail} />
-      <S.CarPrice>
-        <sup>$</sup>
-        {car.price}
-        <span>/day</span>
-      </S.CarPrice>
+      <S.Footer isHovering={isHovering}>
+        {isHovering && <S.BookNow>Book now</S.BookNow>}
+        <S.CarPrice>
+          <sup>$</sup>
+          {car.price}
+          <p>/day</p>
+        </S.CarPrice>
+      </S.Footer>
     </S.Card>
   );
 };
