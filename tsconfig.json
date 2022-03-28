@@ -1,5 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets": ["./src/assets/index"],
+      "@components": ["./src/components/index"],
+      "@pages": ["./src/pages/index"],
+      "@routes": ["./src/routes/index"],
+      "@shared/hooks": ["./src/shared/hooks/index"],
+      "@shared/services": ["./src/shared/services/index"],
+      "@shared/styles": ["./src/shared/styles/index"],
+      "@shared/types": ["./src/shared/types/index"],
+      "@store": ["./src/store/index"],
+    },
     "target": "es5",
     "lib": [
       "dom",

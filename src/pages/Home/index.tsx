@@ -1,6 +1,5 @@
 import * as S from "./styles";
-import { CarList } from "../../components/CarList/CarList";
-import { ScrollToTopButton } from "../../components/ScrollToTopButton/ScrollToTopButton";
+import { CarList, ScrollButton } from "@components";
 import { useScrollToTop } from "./useScrollToTop";
 
 export const Home = () => {
@@ -8,7 +7,7 @@ export const Home = () => {
   return (
     <S.Section>
       <CarList />
-      {visibility && <ScrollToTopButton scrollToTop={scrollToTop} />}
+      {visibility && <ScrollButton scrollToTop={scrollToTop} />}
     </S.Section>
   );
 };

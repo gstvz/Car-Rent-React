@@ -1,6 +1,6 @@
 import * as S from "./styles";
-import { Header } from "../Header/Header";
-import { AppRoutes } from "../../routes/AppRoutes";
+import { Header } from "@components";
+import { AppRoutes } from "@routes";
 
 export const Layout = () => {
   return (

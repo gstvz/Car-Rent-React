@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCarsData } from "../../store/cars/thunk";
-import { CarsState } from "../types/cars";
+import { getCarsData } from "@store";
+import { CarsState } from "@shared/types";
 
 export const useCars = () => {
   const dispatch = useDispatch();

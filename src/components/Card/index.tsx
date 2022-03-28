@@ -1,4 +1,4 @@
-import { Car } from "../../shared/types/cars";
+import { Car } from "@shared/types";
 import * as S from "./styles";
 
 type CardProps = {

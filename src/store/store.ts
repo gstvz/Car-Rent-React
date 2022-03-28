@@ -1,8 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { carsSlice } from "./cars/cars";
+import { carsSlice } from "@store";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: carsSlice.reducer,
 });
-
-export default store;

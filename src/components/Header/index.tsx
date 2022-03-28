@@ -1,7 +1,5 @@
 import * as S from "./styles";
-import icon_calendar from "../../assets/icons/icon_calendar.svg";
-import icon_map from "../../assets/icons/icon_map.svg";
-import icon_search from "../../assets/icons/icon_search.svg";
+import { icon_calendar, icon_map, icon_search } from "@assets";
 
 export const Header = () => {
   return (

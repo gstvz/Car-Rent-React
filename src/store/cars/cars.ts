@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CarsState } from "../../shared/types/cars";
+import { CarsState } from "@shared/types";
 
 const initialState: CarsState = {
   cars: [],

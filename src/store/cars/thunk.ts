@@ -1,5 +1,5 @@
-import { getCars } from "../../shared/services/getCars/getCars";
-import { carsActions } from "./cars";
+import { getCars } from "@shared/services";
+import { carsActions } from "@store";
 
 export function getCarsData() {
   return async (dispatch: Function) => {

@@ -1,5 +1,5 @@
-import { useCars } from "../../shared/hooks/useCars";
-import { Card } from "../Card/Card";
+import { useCars } from "@shared/hooks";
+import { Card } from "@components";
 import * as S from "./styles";
 
 export const CarList = () => {
