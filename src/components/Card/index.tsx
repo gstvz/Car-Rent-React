@@ -1,16 +1,20 @@
 import { Car } from "@shared/types";
 import * as S from "./styles";
-import { useHover } from "./useHover";
+import { useCard } from "./useCard";
 
 type CardProps = {
   car: Car;
 };
 
 export const Card = ({ car }: CardProps) => {
-  const { isHovering, renderComponent } = useHover();
+  const { isHovering, renderComponent, handleCardClick } = useCard();
 
   return (
-    <S.Card onMouseEnter={renderComponent} onMouseLeave={renderComponent}>
+    <S.Card
+      onMouseEnter={renderComponent}
+      onMouseLeave={renderComponent}
+      onClick={() => handleCardClick(car.id)}
+    >
       <S.Header>
         <S.CarInfo>
           <S.CarMake>{car.make}</S.CarMake>

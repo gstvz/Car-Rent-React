@@ -7,6 +7,7 @@ type FooterProps = {
 export const Card = styled.li`
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 20px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,9 +75,7 @@ export const CarPrice = styled.span`
   }
 `;
 
-export const BookNow = styled.button`
-  background: none;
-  border: none;
+export const BookNow = styled.p`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 1.7rem;
   font-weight: ${({ theme }) => theme.fontWeights.medium_500};
