@@ -1,11 +1,14 @@
 import * as S from "./styles";
 import { icon_calendar, icon_map, icon_search } from "@assets";
+import { useHeader } from "./useHeader";
 
 export const Header = () => {
+  const { handleLogoClick } = useHeader();
+
   return (
     <S.Header>
       <S.Container>
-        <S.LogoWrapper>
+        <S.LogoWrapper onClick={handleLogoClick}>
           <S.LogoExotic>EXOTIC</S.LogoExotic>
           <S.LogoCars>CARS</S.LogoCars>
         </S.LogoWrapper>

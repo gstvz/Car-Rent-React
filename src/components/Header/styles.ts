@@ -23,6 +23,7 @@ export const Container = styled.div`
 export const LogoWrapper = styled.div`
   align-items: baseline;
   color: ${({ theme }) => theme.colors.text};
+  cursor: pointer;
   display: flex;
   gap: 5px;
 `;
