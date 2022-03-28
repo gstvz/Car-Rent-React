@@ -1,11 +1,14 @@
-import { Home } from "../../pages/Home/Home";
+import * as S from "./styles";
 import { Header } from "../Header/Header";
+import { AppRoutes } from "../../routes/AppRoutes";
 
 export const Layout = () => {
   return (
     <>
       <Header />
-      <Home />
+      <S.Main>
+        <AppRoutes />
+      </S.Main>
     </>
   );
 };
