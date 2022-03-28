@@ -3,114 +3,121 @@
     {
       "id": 1,
       "make": "Ferrari",
+      "makeLogo": "https://i.ibb.co/JxBFp5X/No-Path-Copia-10.png",
       "model": "CALIFORNIA",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/vX5GtS9/Mask-Group-11.png"      
+      "thumbnail": "https://i.ibb.co/vX5GtS9/Mask-Group-11.png",
+      "colors": [
+        {
+          "color": "Red",
+          "photo": "https://i.ibb.co/Lg6wLCf/Mask-Group-13.png"
+        }
+      ]
     },
     {
       "id": 2,
       "make": "Porsche",
       "model": "911 TURBO S",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/vX5GtS9/Mask-Group-11.png"      
+      "thumbnail": "https://i.ibb.co/vX5GtS9/Mask-Group-11.png"
     },
     {
       "id": 3,
       "make": "Porsche",
       "model": "911 TURBO S",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/sFKS24z/No-Path-Copia-16.png"      
+      "thumbnail": "https://i.ibb.co/sFKS24z/No-Path-Copia-16.png"
     },
     {
       "id": 4,
       "make": "Porsche",
       "model": "911 TURBO S",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/1npBhXc/No-Path-Copia-17-2x.png"      
+      "thumbnail": "https://i.ibb.co/1npBhXc/No-Path-Copia-17-2x.png"
     },
     {
       "id": 5,
       "make": "Porsche",
       "model": "911 GT3 RS",
       "price": "825",
-      "thumbnail": "https://i.ibb.co/2tZR2Wq/kisspng-2018-porsche-911-porsche-930-car-porsche-911-gt3-2018-porsche-911-carrera-s-5b1b890fbdf223-1.png"      
+      "thumbnail": "https://i.ibb.co/2tZR2Wq/kisspng-2018-porsche-911-porsche-930-car-porsche-911-gt3-2018-porsche-911-carrera-s-5b1b890fbdf223-1.png"
     },
     {
       "id": 6,
       "make": "Bentley",
       "model": "CONTINENTAL GT",
       "price": "825",
-      "thumbnail": "https://i.ibb.co/Fm4PzXT/Mask-Group-8.png"      
+      "thumbnail": "https://i.ibb.co/Fm4PzXT/Mask-Group-8.png"
     },
     {
       "id": 7,
       "make": "BMW",
       "model": "M1 COMPETITION",
       "price": "825",
-      "thumbnail": "https://i.ibb.co/LR1XfHC/Mask-Group-9.png"      
+      "thumbnail": "https://i.ibb.co/LR1XfHC/Mask-Group-9.png"
     },
     {
       "id": 8,
       "make": "Alfa Romeo",
       "model": "4C SPIDER",
       "price": "825",
-      "thumbnail": "https://i.ibb.co/gPgFR87/Mask-Group-10.png"      
+      "thumbnail": "https://i.ibb.co/gPgFR87/Mask-Group-10.png"
     },
     {
       "id": 9,
       "make": "McLaren",
       "model": "P1 GTR",
       "price": "925",
-      "thumbnail": "https://i.ibb.co/yp2C5Zz/No-Path-Copia-15.png"      
+      "thumbnail": "https://i.ibb.co/yp2C5Zz/No-Path-Copia-15.png"
     },
     {
       "id": 10,
       "make": "Lamborghini",
       "model": "AVENTADOR",
       "price": "925",
-      "thumbnail": "https://i.ibb.co/dBJfPRG/No-Path-Copia-14.png"      
+      "thumbnail": "https://i.ibb.co/dBJfPRG/No-Path-Copia-14.png"
     },
     {
       "id": 11,
       "make": "Bugatti",
       "model": "VEYRON SPYDER",
       "price": "925",
-      "thumbnail": "https://i.ibb.co/SNk6kFP/No-Path-Copia-13.png"      
+      "thumbnail": "https://i.ibb.co/SNk6kFP/No-Path-Copia-13.png"
     },
     {
       "id": 12,
       "make": "Chevrolet",
       "model": "CORVETT",
       "price": "925",
-      "thumbnail": "https://i.ibb.co/pjynMxx/Mask-Group-7.png"      
+      "thumbnail": "https://i.ibb.co/pjynMxx/Mask-Group-7.png"
     },
     {
       "id": 13,
       "make": "Ferrari",
       "model": "CALIFORNIA",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/kyh5cYM/ferrari-PNG10674.png"      
+      "thumbnail": "https://i.ibb.co/kyh5cYM/ferrari-PNG10674.png"
     },
     {
       "id": 14,
       "make": "Rolls-Royce",
       "model": "WRAITH",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/312cMfZ/No-Path-Copia-18.png"      
+      "thumbnail": "https://i.ibb.co/312cMfZ/No-Path-Copia-18.png"
     },
     {
       "id": 15,
       "make": "Porsche",
       "model": "911 TURBO S",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/XFNQX3Z/Mask-Group-6.png"      
+      "thumbnail": "https://i.ibb.co/XFNQX3Z/Mask-Group-6.png"
     },
     {
       "id": 16,
       "make": "Mercedes-Benz",
       "model": "AMG GTS",
       "price": "725",
-      "thumbnail": "https://i.ibb.co/HHWhVPY/Mask-Group-5.png"      
+      "thumbnail": "https://i.ibb.co/HHWhVPY/Mask-Group-5.png"
     }
   ]
 }
