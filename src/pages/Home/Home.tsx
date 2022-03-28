@@ -6,9 +6,9 @@ import { useScrollToTop } from "./useScrollToTop";
 export const Home = () => {
   const { visibility, scrollToTop } = useScrollToTop();
   return (
-    <S.Main>
+    <S.Section>
       <CarList />
       {visibility && <ScrollToTopButton scrollToTop={scrollToTop} />}
-    </S.Main>
+    </S.Section>
   );
 };
