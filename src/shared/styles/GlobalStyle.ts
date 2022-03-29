@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "react-toastify/dist/ReactToastify.css";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -25,5 +26,9 @@ export const GlobalStyle = createGlobalStyle`
   
   li {
     list-style-type: none;
+  }
+
+  .Toastify__toast-container {
+    font-size: 1.5rem;
   }
 `;

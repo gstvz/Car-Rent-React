@@ -2,6 +2,7 @@ import { useCars } from "@shared/hooks";
 import { Car } from "@shared/types";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const useCarDetails = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ export const useCarDetails = () => {
   };
 
   const handleBookNow = () => {
+    toast.warn('The booking functionality is not available yet!');
     return;
   };
 
