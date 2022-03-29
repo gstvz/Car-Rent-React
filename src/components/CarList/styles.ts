@@ -14,3 +14,11 @@ export const CarList = styled.ul`
   justify-content: space-between;
   width: 100%;
 `;
+
+export const ErrorContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  width: 100%;
+`;
