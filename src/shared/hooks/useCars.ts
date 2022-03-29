@@ -11,5 +11,5 @@ export const useCars = () => {
     dispatch(getCarsData());
   }, [dispatch]);
 
-  return { cars };
+  return cars;
 };

@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 export const useCarDetails = () => {
   const navigate = useNavigate();
   const [car, setCar] = useState<Car | null>(null);
-  const { cars } = useCars();
+  const cars = useCars();
   const { carId } = useParams();
 
   const handleBackToCatalog = () => {
@@ -24,7 +24,9 @@ export const useCarDetails = () => {
       setCar(chosenCar);
     };
 
-    findChosenCar();
+    if (cars) {
+      findChosenCar();
+    }
   }, [cars, carId]);
 
   return { car, handleBackToCatalog, handleBookNow };

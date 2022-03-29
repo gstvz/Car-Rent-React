@@ -1,17 +1,22 @@
 import { useCars } from "@shared/hooks";
 import { Card } from "@components";
 import * as S from "./styles";
+import { ErrorMessage } from "../ErrorMessage";
 
 export const CarList = () => {
-  const { cars } = useCars();
-
+  const cars = useCars();
+  
   return (
     <S.Container>
-      <S.CarList>
-        {cars.map((car) => (
-          <Card key={car.id} car={car} />
-        ))}
-      </S.CarList>
+      {cars ? (
+        <S.CarList>
+          {cars.map((car) => (
+            <Card key={car.id} car={car} />
+          ))}
+        </S.CarList>
+      ) : (
+        <ErrorMessage message="There are no available cars!" />
+      )}
     </S.Container>
   );
 };
