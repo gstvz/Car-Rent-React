@@ -6,10 +6,12 @@ export const CarList = () => {
   const { cars } = useCars();
 
   return (
-    <S.CarList>
-      {cars.map((car) => (
-        <Card key={car.id} car={car} />
-      ))}
-    </S.CarList>
+    <S.Container>
+      <S.CarList>
+        {cars.map((car) => (
+          <Card key={car.id} car={car} />
+        ))}
+      </S.CarList>
+    </S.Container>
   );
 };
