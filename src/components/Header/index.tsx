@@ -15,15 +15,15 @@ export const Header = () => {
         <S.SearchParamsWrapper>
           <S.SearchParam>
             <S.SearchParamsIcon src={icon_map} />
-            <S.SearchParamsInput placeholder="Location" disabled />
+            <S.SearchParamsInput placeholder="North Carolina, NC 90025" disabled />
           </S.SearchParam>
           <S.SearchParam>
             <S.SearchParamsIcon src={icon_calendar} />
-            <S.SearchParamsInput type="date" disabled />
+            <S.SearchParamsInput placeholder="11/03/2021" disabled />
           </S.SearchParam>
           <S.SearchParam>
             <S.SearchParamsIcon src={icon_calendar} />
-            <S.SearchParamsInput type="date" disabled />
+            <S.SearchParamsInput placeholder="12/12/2021" disabled />
           </S.SearchParam>
           <S.SearchButton disabled>
             <S.SearchParamsIcon src={icon_search} />
