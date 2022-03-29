@@ -5,8 +5,10 @@ export function getCarsData() {
   return async (dispatch: Function) => {
     const cars = await getCars();
 
-    dispatch(
-      carsActions.setCars(cars)
-    );
+    if(cars) {
+      dispatch(
+        carsActions.setCars(cars)
+      );
+    }
   };
 }
