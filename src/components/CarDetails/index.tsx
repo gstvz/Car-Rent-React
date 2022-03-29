@@ -8,7 +8,12 @@ export const CarDetails = () => {
 
   return (
     <S.Container>
-      {car ? (
+      {/*
+        Vehicles should have one color by default, or more. 
+        If it doesn't have any color, it shouldn't be available.
+        Therefore, ErrorMessage should be shown.
+      */}
+      {car?.colors ? (
         <>
           <S.Car>
             <S.CarHeader>
