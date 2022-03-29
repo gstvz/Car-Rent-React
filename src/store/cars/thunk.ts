@@ -9,6 +9,9 @@ export function getCarsData() {
       dispatch(
         carsActions.setCars(cars)
       );
+      dispatch(carsActions.setError(false));
+    } else {
+      dispatch(carsActions.setError(true));
     }
   };
 }

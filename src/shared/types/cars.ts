@@ -13,4 +13,5 @@ export type Car = {
 
 export interface CarsState {
   cars: Car[];
+  error: boolean;
 }
