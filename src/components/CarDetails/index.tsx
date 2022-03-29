@@ -4,7 +4,7 @@ import { useCarDetails } from "./useCarDetails";
 import { ErrorMessage } from "../ErrorMessage";
 
 export const CarDetails = () => {
-  const { car, handleBackToCatalog, handleBookNow } = useCarDetails();
+  const { car, error, handleTryAgain, handleBackToCatalog, handleBookNow } = useCarDetails();
 
   return (
     <S.Container>
@@ -13,7 +13,14 @@ export const CarDetails = () => {
         If it doesn't have any color, it shouldn't be available.
         Therefore, ErrorMessage should be shown.
       */}
-      {car?.colors ? (
+      {error && (
+        <S.ErrorContainer>
+          <ErrorMessage message="This car is not available!" />
+          <Button text="Try again" forward onPress={handleTryAgain} />
+        </S.ErrorContainer>
+      )}
+
+      {car?.colors && (
         <>
           <S.Car>
             <S.CarHeader>
@@ -38,13 +45,6 @@ export const CarDetails = () => {
             <S.CarColor>{car?.colors[0].color}</S.CarColor>
           </S.CarIdAndColor>
         </>
-      ) : (
-        <S.ErrorContainer>
-          <S.ErrorButtonContainer>
-            <Button text="Back to catalog" onPress={handleBackToCatalog} />
-          </S.ErrorButtonContainer>
-          <ErrorMessage message="This car is not available!" />
-        </S.ErrorContainer>
       )}
     </S.Container>
   );
