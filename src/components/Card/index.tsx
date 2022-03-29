@@ -18,7 +18,7 @@ export const Card = ({ car }: CardProps) => {
       <S.Header>
         <S.CarInfo>
           <S.CarMake>{car.make}</S.CarMake>
-          <S.CarModel>{car.model}</S.CarModel>
+          <S.CarModel>{`${car.model}`.toUpperCase()}</S.CarModel>
         </S.CarInfo>
         <S.Options>
           <S.Dot />
