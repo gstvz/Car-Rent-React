@@ -26,7 +26,7 @@ export const CarDetails = () => {
         </S.ButtonContainer>
       </S.Car>
       <S.CarIdAndColor>
-        <S.CarId>{car?.id}</S.CarId>
+        <S.CarId>{`${car?.id}`.padStart(2, "0")}</S.CarId>
         <S.CarColor>{car?.colors[0].color}</S.CarColor>
       </S.CarIdAndColor>
     </S.Container>
