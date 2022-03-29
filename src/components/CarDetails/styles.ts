@@ -65,3 +65,16 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   margin-top: 2rem;
 `
+
+export const ErrorButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+`
+
+export const ErrorContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`

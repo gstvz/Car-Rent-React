@@ -39,7 +39,12 @@ export const CarDetails = () => {
           </S.CarIdAndColor>
         </>
       ) : (
-        <ErrorMessage message="This car is not available!" />
+        <S.ErrorContainer>
+          <S.ErrorButtonContainer>
+            <Button text="Back to catalog" onPress={handleBackToCatalog} />
+          </S.ErrorButtonContainer>
+          <ErrorMessage message="This car is not available!" />
+        </S.ErrorContainer>
       )}
     </S.Container>
   );
