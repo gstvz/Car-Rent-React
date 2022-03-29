@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 export const useCarDetails = () => {
   const navigate = useNavigate();
   const [car, setCar] = useState<Car | null>(null);
-  const cars = useCars();
+  const { cars, error, handleTryAgain } = useCars();
   const { carId } = useParams();
 
   const handleBackToCatalog = () => {
@@ -31,5 +31,5 @@ export const useCarDetails = () => {
     }
   }, [cars, carId]);
 
-  return { car, handleBackToCatalog, handleBookNow };
+  return { car, error, handleTryAgain, handleBackToCatalog, handleBookNow };
 };
