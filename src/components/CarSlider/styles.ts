@@ -9,6 +9,10 @@ type ArrowProps = {
   forward?: boolean;
 };
 
+type CardProps = {
+  isActive: boolean;
+}
+
 export const Container = styled.div`
   display: flex;
   margin: 0 auto;
@@ -39,6 +43,7 @@ export const Arrow = styled.img<ArrowProps>`
 `;
 
 export const Slider = styled(Swiper)`
+  height: 20rem;
   margin-bottom: 6rem;
   position: relative;
 `;
@@ -50,21 +55,21 @@ export const Slide = styled.div`
   width: 100%;
 `;
 
-export const Card = styled.div`
+export const Card = styled.div<CardProps>`
   align-items: center;
   background: linear-gradient(90deg, #b9baf1 0%, #e0d3ef 100%);
   border-radius: 0.8rem;
   display: flex;
   justify-content: center;
-  height: 15rem;
+  height: ${({ isActive }) => isActive ? "18rem" : "14rem"};
   position: relative;
-  width: 15rem;
+  width: ${({ isActive }) => isActive ? "20rem" : "16rem"}
 `;
 
 export const CarPhoto = styled.img`
   position: absolute;
-  left: 5%;
+  left: 10%;
   right: 0;
   top: 10%;
-  width: 160%;
+  width: 140%;
 `;

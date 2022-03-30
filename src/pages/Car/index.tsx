@@ -7,7 +7,7 @@ export const Car = () => {
   return (
     <S.Section>
       <CarDetails car={car} color={color} />
-      {car?.colors && <CarSlider carColors={car.colors} handleSlide={handleSlide} />}
+      {car?.colors && <CarSlider carColors={car.colors} activeColor={color} handleSlide={handleSlide} />}
     </S.Section>
   );
 };
