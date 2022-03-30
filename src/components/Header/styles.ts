@@ -77,22 +77,36 @@ export const SearchButton = styled.button`
   justify-content: center;
   margin-right: 0.5rem;
   width: 3rem;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.tertiary};
+
+    ${SearchParamsIcon} {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(283deg) brightness(102%) contrast(101%);
+    }
+  }
 `;
 
 export const ActionsWrapper = styled.div`
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  width: 16rem;
+  gap: 1rem;
+  width: 20rem;
 `;
 
 export const ActionButton = styled.button<ActionButtonProps>`
   background-color: ${({ theme }) => theme.colors.primary};
   ${({ border, theme }) =>
-    border ? `border: 2px solid ${theme.colors.tertiary}` : "border: none"};
+    border ? `border: 2px solid ${theme.colors.tertiary}` : `border: 2px solid ${theme.colors.primary}`};
   border-radius: 13px;
   color: ${({ theme }) => theme.colors.tertiary};
   font-size: 1.6rem;
   font-weight: ${({ theme }) => theme.fontWeights.regular_700};
   padding: 0.6rem 1rem;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.tertiary};
+    border-color: ${({ theme }) => theme.colors.tertiary};
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
