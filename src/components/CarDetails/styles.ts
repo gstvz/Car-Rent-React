@@ -48,7 +48,9 @@ export const CarPhoto = styled.img`
   width: 60rem;
 `;
 
-export const CarIdAndColor = styled.aside``;
+export const CarIdAndColor = styled.aside`
+  width: 6rem;
+`;
 
 export const CarId = styled.p`
   font-size: 4rem;
