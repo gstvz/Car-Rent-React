@@ -2,6 +2,7 @@ export * from "./Button";
 export * from "./Card";
 export * from "./CarDetails";
 export * from "./CarList";
+export * from "./CarSlider";
 export * from "./ErrorMessage";
 export * from "./Header";
 export * from "./Layout";
