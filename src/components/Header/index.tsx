@@ -12,7 +12,7 @@ export const Header = () => {
           <S.LogoExotic>EXOTIC</S.LogoExotic>
           <S.LogoCars>CARS</S.LogoCars>
         </S.LogoWrapper>
-        <S.SearchParamsWrapper>
+        <S.SearchParamsWrapper onClick={handleActionButton}>
           <S.SearchParam>
             <S.SearchParamsIcon src={icon_map} />
             <S.SearchParamsInput placeholder="North Carolina, NC 90025" disabled />
@@ -25,7 +25,7 @@ export const Header = () => {
             <S.SearchParamsIcon src={icon_calendar} />
             <S.SearchParamsInput placeholder="12/12/2021" disabled />
           </S.SearchParam>
-          <S.SearchButton onClick={handleActionButton}>
+          <S.SearchButton>
             <S.SearchParamsIcon src={icon_search} />
           </S.SearchButton>
         </S.SearchParamsWrapper>
