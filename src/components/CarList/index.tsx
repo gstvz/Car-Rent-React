@@ -2,10 +2,11 @@ import { Card } from "@components";
 import * as S from "./styles";
 import { ErrorMessage } from "../ErrorMessage";
 import { Button } from "../Button";
-import { useCars } from "@shared/hooks";
+import { useButtons, useCars } from "@shared/hooks";
 
 export const CarList = () => {
-  const { cars, error, handleTryAgain } = useCars();
+  const { cars, error } = useCars();
+  const { handleTryAgain } = useButtons();
 
   return (
     <S.Container>

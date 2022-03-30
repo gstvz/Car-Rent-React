@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import { Button } from "@components";
-import { useCarDetails } from "./useCarDetails";
+import { useButtons, useCars } from "@shared/hooks";
 import { ErrorMessage } from "../ErrorMessage";
 import { Car } from "@shared/types";
 
@@ -10,7 +10,9 @@ type Props = {
 }
 
 export const CarDetails = ({ car, color }: Props) => {
-  const { error, handleTryAgain, handleBackToCatalog, handleBookNow } = useCarDetails();
+  const { error } = useCars();
+  const { handleBackToCatalog, handleActionButton, handleTryAgain } = useButtons();
+
   return (
     <S.Container>
       {/*
@@ -42,7 +44,7 @@ export const CarDetails = ({ car, color }: Props) => {
               <S.CarPhoto src={car?.colors[color].photo} />
             </S.CarPhotoContainer>
             <S.ButtonContainer>
-              <Button text="Book now" forward onPress={handleBookNow} />
+              <Button text="Book now" forward onPress={handleActionButton} />
             </S.ButtonContainer>
           </S.Car>
           <S.CarIdAndColor>
