@@ -6,6 +6,3 @@ export const Section = styled.section`
   min-height: calc(100vh - 8.4rem);
   width: 100%;
 `;
-
-// Cores do carro, slider;
-export const CarOptions = styled.div``;
