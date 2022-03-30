@@ -7,3 +7,4 @@ export * from "./ErrorMessage";
 export * from "./Header";
 export * from "./Layout";
 export * from "./ScrollButton";
+export * from "./Spinner";
