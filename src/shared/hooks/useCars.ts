@@ -8,13 +8,9 @@ export const useCars = () => {
   const cars = useSelector((state: CarsState) => state.cars);
   const error = useSelector((state: CarsState) => state.error);
 
-  const handleTryAgain = () => {
-    dispatch(getCarsData());
-  };
-
   useEffect(() => {
     dispatch(getCarsData());
   }, [dispatch]);
 
-  return { cars, error, handleTryAgain };
+  return { cars, error };
 };
