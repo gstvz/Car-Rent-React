@@ -5,7 +5,7 @@ import { useCars } from "@shared/hooks";
 
 export const useCar = () => {
   const { carId } = useParams();
-  const { cars, error } = useCars();
+  const { cars, error, isLoading } = useCars();
   const [car, setCar] = useState<Car | null>(null);
   const [color, setColor] = useState<number>(0);
 
@@ -25,5 +25,5 @@ export const useCar = () => {
     setColor(index);
   };
 
-  return { car, cars, color, error, handleSlide };
+  return { car, cars, color, error, handleSlide, isLoading };
 };
