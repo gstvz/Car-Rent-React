@@ -1,16 +1,16 @@
 import * as S from "./styles";
 import { Button } from "@components";
-import { useButtons, useCars } from "@shared/hooks";
+import { useButtons } from "@shared/hooks";
 import { ErrorMessage } from "../ErrorMessage";
 import { Car } from "@shared/types";
 
 type Props = {
   car: Car | null;
   color: number;
+  error: boolean;
 }
 
-export const CarDetails = ({ car, color }: Props) => {
-  const { error } = useCars();
+export const CarDetails = ({ car, color, error }: Props) => {
   const { handleBackToCatalog, handleActionButton, handleTryAgain } = useButtons();
 
   return (

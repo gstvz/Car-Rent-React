@@ -3,10 +3,10 @@ import { useCar } from "@shared/hooks";
 import * as S from "./styles";
 
 export const Car = () => {
-  const { car, color, handleSlide } = useCar();
+  const { car, color, error, handleSlide } = useCar();
   return (
     <S.Section>
-      <CarDetails car={car} color={color} />
+      <CarDetails car={car} color={color} error={error} />
       {car?.colors && <CarSlider carColors={car.colors} activeColor={color} handleSlide={handleSlide} />}
     </S.Section>
   );
