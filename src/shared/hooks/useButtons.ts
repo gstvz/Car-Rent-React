@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { getCarsData } from "@store";
+import { Car } from "@shared/types";
 
 export const useButtons = () => {
   const dispatch = useDispatch();
@@ -20,8 +21,12 @@ export const useButtons = () => {
     return;
   };
 
-  const handleTryAgain = () => {
+  const handleTryAgain = (car?: Car | null, cars?: Car[]) => {
     dispatch(getCarsData());
+    
+    if(cars?.length !== 0 && !car?.colors) {
+      toast.warn("This car is not available!");
+    }
   };
 
   return { handleLogoClick, handleBackToCatalog, handleActionButton, handleTryAgain };

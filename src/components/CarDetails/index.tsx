@@ -6,11 +6,12 @@ import { Car } from "@shared/types";
 
 type Props = {
   car: Car | null;
+  cars: Car[];
   color: number;
   error: boolean;
 }
 
-export const CarDetails = ({ car, color, error }: Props) => {
+export const CarDetails = ({ car, cars, color, error }: Props) => {
   const { handleBackToCatalog, handleActionButton, handleTryAgain } = useButtons();
 
   return (
@@ -23,7 +24,7 @@ export const CarDetails = ({ car, color, error }: Props) => {
       {(!car?.colors || error) && (
         <S.ErrorContainer>
           <ErrorMessage message="This car is not available!" />
-          <Button text="Try again" forward onPress={handleTryAgain} />
+          <Button text="Try again" forward onPress={() => {handleTryAgain(car, cars)}} />
         </S.ErrorContainer>
       )}
 

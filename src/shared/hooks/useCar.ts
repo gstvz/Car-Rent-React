@@ -25,5 +25,5 @@ export const useCar = () => {
     setColor(index);
   };
 
-  return { car, color, error, handleSlide };
+  return { car, cars, color, error, handleSlide };
 };
