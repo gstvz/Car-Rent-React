@@ -3,11 +3,11 @@ import { useCar } from "@shared/hooks";
 import * as S from "./styles";
 
 export const Car = () => {
-  const car = useCar();
+  const { car, color, handleSlide } = useCar();
   return (
     <S.Section>
-      <CarDetails />
-      {car?.colors && <CarSlider carColors={car.colors} />}
+      <CarDetails car={car} color={color} />
+      {car?.colors && <CarSlider carColors={car.colors} handleSlide={handleSlide} />}
     </S.Section>
   );
 };

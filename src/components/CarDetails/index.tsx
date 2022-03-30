@@ -2,9 +2,15 @@ import * as S from "./styles";
 import { Button } from "@components";
 import { useCarDetails } from "./useCarDetails";
 import { ErrorMessage } from "../ErrorMessage";
+import { Car } from "@shared/types";
 
-export const CarDetails = () => {
-  const { car, error, handleTryAgain, handleBackToCatalog, handleBookNow } = useCarDetails();
+type Props = {
+  car: Car | null;
+  color: number;
+}
+
+export const CarDetails = ({ car, color }: Props) => {
+  const { error, handleTryAgain, handleBackToCatalog, handleBookNow } = useCarDetails();
   return (
     <S.Container>
       {/*
@@ -33,15 +39,15 @@ export const CarDetails = () => {
             </S.CarHeader>
             <S.CarPhotoContainer>
               <Button text="Back to catalog" onPress={handleBackToCatalog} />
-              <S.CarPhoto src={car?.colors[0].photo} />
+              <S.CarPhoto src={car?.colors[color].photo} />
             </S.CarPhotoContainer>
             <S.ButtonContainer>
               <Button text="Book now" forward onPress={handleBookNow} />
             </S.ButtonContainer>
           </S.Car>
           <S.CarIdAndColor>
-            <S.CarId>{`${car?.id}`.padStart(2, "0")}</S.CarId>
-            <S.CarColor>{car?.colors[0].color}</S.CarColor>
+            <S.CarId>{`${color + 1}`.padStart(2, "0")}</S.CarId>
+            <S.CarColor>{car?.colors[color].color}</S.CarColor>
           </S.CarIdAndColor>
         </>
       )}

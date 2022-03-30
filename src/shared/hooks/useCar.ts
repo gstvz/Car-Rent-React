@@ -7,10 +7,23 @@ export const useCar = () => {
   const { carId } = useParams();
   const { cars } = useCars();
   const [car, setCar] = useState<Car | null>(null);
+  const [color, setColor] = useState<number>(0);
 
   useEffect(() => {
-    setCar(cars[Number(carId) - 1]);
-  }, [carId]);
+    const findChosenCar = () => {
+      const searchCar = cars.filter((car) => car.id === Number(carId));
+      const chosenCar = searchCar[0];
+      setCar(chosenCar);
+    };
 
-  return car;
+    if (cars) {
+      findChosenCar();
+    }
+  }, [cars, carId]);
+
+  const handleSlide = (index: number) => {
+    setColor(index);
+  };
+
+  return { car, color, handleSlide };
 };

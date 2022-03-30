@@ -9,9 +9,10 @@ type Props = {
     color: string;
     photo: string;
   }[];
+  handleSlide: (index: number) => void;
 };
 
-export const CarSlider = ({ carColors }: Props) => {
+export const CarSlider = ({ carColors, handleSlide }: Props) => {
   const btnNext = useRef<HTMLButtonElement>(null);
   const btnPrev = useRef<HTMLButtonElement>(null);
 
@@ -34,6 +35,7 @@ export const CarSlider = ({ carColors }: Props) => {
         centeredSlides={true}
         spaceBetween={20}
         slideToClickedSlide
+        onTransitionEnd={(swiper) => handleSlide(swiper.realIndex)}
       >
         {carColors.map((color) => (
           <SwiperSlide>
