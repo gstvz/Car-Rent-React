@@ -1,12 +1,12 @@
 import { Card } from "@components";
 import * as S from "./styles";
 import { ErrorMessage } from "../ErrorMessage";
-import { Button } from "../Button";
+import { Button, Spinner } from "@components";
 import { useButtons, useCars } from "@shared/hooks";
 
 export const CarList = () => {
-  const { cars, error } = useCars();
-  const { handleTryAgain } = useButtons();
+  const { cars, error, isLoading } = useCars();
+  const { handleTryAgain } = useButtons();  
 
   return (
     <S.Container>
@@ -16,6 +16,8 @@ export const CarList = () => {
           <Button text="Try again" forward onPress={handleTryAgain} />
         </S.ErrorContainer>
       )}
+
+      <Spinner isLoading={isLoading} />
 
       {cars.length > 0 && (
         <S.CarList>

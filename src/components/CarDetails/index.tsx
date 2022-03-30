@@ -3,15 +3,17 @@ import { Button } from "@components";
 import { useButtons } from "@shared/hooks";
 import { ErrorMessage } from "../ErrorMessage";
 import { Car } from "@shared/types";
+import { Spinner } from "../Spinner";
 
 type Props = {
   car: Car | null;
   cars: Car[];
   color: number;
   error: boolean;
+  isLoading: boolean;
 }
 
-export const CarDetails = ({ car, cars, color, error }: Props) => {
+export const CarDetails = ({ car, cars, color, error, isLoading }: Props) => {
   const { handleBackToCatalog, handleActionButton, handleTryAgain } = useButtons();
 
   return (
@@ -28,7 +30,9 @@ export const CarDetails = ({ car, cars, color, error }: Props) => {
         </S.ErrorContainer>
       )}
 
-      {car?.colors && !error && (
+    <Spinner isLoading={isLoading} />
+
+      {car?.colors && !error && !isLoading && (
         <>
           <S.Car>
             <S.CarHeader>
