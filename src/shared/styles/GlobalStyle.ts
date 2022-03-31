@@ -32,4 +32,11 @@ export const GlobalStyle = createGlobalStyle`
   .Toastify__toast-container {
     font-size: 1.5rem;
   }
+
+  @media(max-width: 1200px) {
+    .Toastify__toast-container {
+      margin: 0 auto;
+      width: 30rem;
+    }
+  };
 `;
