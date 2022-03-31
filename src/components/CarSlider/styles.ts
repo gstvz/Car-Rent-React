@@ -52,7 +52,6 @@ export const Slider = styled(Swiper)`
   margin-bottom: 6rem;
 
   @media(max-width: 1200px) {
-    margin: 0 auto;
     width: 20rem;
   };
 `;
@@ -64,7 +63,6 @@ export const Slide = styled.div`
   width: 100%;
 
   @media(max-width: 1200px) {
-    margin: 0 auto;
     width: 15rem;
   };
 `;

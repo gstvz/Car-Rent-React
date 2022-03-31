@@ -134,4 +134,8 @@ export const MobileMenu = styled.img`
   filter: brightness(0) saturate(100%) invert(57%) sepia(34%) saturate(3624%) hue-rotate(207deg) brightness(98%) contrast(95%);
   height: 1.8rem;
   width: 1.8rem;
+
+  @media(min-width: 1200px) {
+    display: none;
+  };
 `;

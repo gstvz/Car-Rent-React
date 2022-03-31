@@ -86,7 +86,10 @@ export const CarIdAndColor = styled.aside`
   width: 6rem;
 
   @media(max-width: 1200px) {
-    text-align: center;
+    align-items: center;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
   };
 `;
 
