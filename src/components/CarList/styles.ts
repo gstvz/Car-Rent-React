@@ -13,6 +13,11 @@ export const CarList = styled.ul`
   gap: 30px;
   justify-content: space-between;
   width: 100%;
+
+  @media(max-width: 1200px) {
+    align-items: center;
+    flex-direction: column;
+  };
 `;
 
 export const ErrorContainer = styled.div`
