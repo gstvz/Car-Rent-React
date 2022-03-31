@@ -11,12 +11,12 @@ type ArrowProps = {
 
 type CardProps = {
   isActive: boolean;
-}
+};
 
 export const Container = styled.div`
   display: flex;
   margin: 0 auto;
-  width: 85%;
+  width: 100%;
 `;
 
 export const SlideButton = styled.button<ButtonSide>`
@@ -34,10 +34,10 @@ export const SlideButton = styled.button<ButtonSide>`
   ${({ side }) => (side === "left" ? "left: 0" : "right: 0")};
   width: 3rem;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     margin-left: 2rem;
     margin-right: 2rem;
-  };
+  } ;
 `;
 
 export const Arrow = styled.img<ArrowProps>`
@@ -50,10 +50,6 @@ export const Arrow = styled.img<ArrowProps>`
 export const Slider = styled(Swiper)`
   height: 20rem;
   margin-bottom: 6rem;
-
-  @media(max-width: 1200px) {
-    width: 20rem;
-  };
 `;
 
 export const Slide = styled.div`
@@ -61,10 +57,6 @@ export const Slide = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-
-  @media(max-width: 1200px) {
-    width: 15rem;
-  };
 `;
 
 export const Card = styled.div<CardProps>`
@@ -73,14 +65,14 @@ export const Card = styled.div<CardProps>`
   border-radius: 8px;
   display: flex;
   justify-content: center;
-  height: ${({ isActive }) => isActive ? "18rem" : "14rem"};
+  height: ${({ isActive }) => (isActive ? "18rem" : "14rem")};
   position: relative;
-  width: ${({ isActive }) => isActive ? "20rem" : "16rem"};
+  width: ${({ isActive }) => (isActive ? "20rem" : "16rem")};
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     height: 10rem;
     width: 14rem;
-  };
+  } ;
 `;
 
 export const CarPhoto = styled.img`
@@ -90,8 +82,8 @@ export const CarPhoto = styled.img`
   top: 10%;
   width: 140%;
 
-  @media(max-width: 1200px) {
+  @media (max-width: 1200px) {
     left: 20%;
     width: 100%;
-  };
+  } ;
 `;

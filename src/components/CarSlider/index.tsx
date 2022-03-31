@@ -38,7 +38,8 @@ export const CarSlider = ({ carColors, activeColor, handleSlide }: Props) => {
         onTransitionEnd={(swiper) => handleSlide(swiper.realIndex)}
         breakpoints={{
           300: {
-            slidesPerView: 1
+            slidesPerView: 1,
+            spaceBetween: 0
           },
           1200: {
             slidesPerView: 3
