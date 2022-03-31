@@ -18,10 +18,6 @@ export const Button = styled.button<Props>`
   height: 1rem;
   padding: 2rem;
   width: fit-content;
-
-  @media(max-width: 1200px) {
-    display: none;
-  };
 `;
 
 export const Arrow = styled.img<Props>`

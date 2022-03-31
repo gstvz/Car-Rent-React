@@ -69,6 +69,11 @@ export const CarPrice = styled.span`
 export const CarPhotoContainer = styled.div`
   align-items: center;
   display: flex;
+
+  @media(max-width: 1200px) {
+    flex-direction: column;
+    margin-top: 2rem;
+  };
 `
 
 export const CarPhoto = styled.img`
@@ -78,6 +83,7 @@ export const CarPhoto = styled.img`
 
   @media(max-width: 1200px) {
     height: 12rem;
+    margin-top: 2rem;
     width: 24rem;
   };
 `;
