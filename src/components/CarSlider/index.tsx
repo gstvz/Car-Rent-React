@@ -32,14 +32,21 @@ export const CarSlider = ({ carColors, activeColor, handleSlide }: Props) => {
           nextEl: btnNext.current,
         }}
         loop={true}
-        slidesPerView={3}
         centeredSlides={true}
         spaceBetween={20}
         slideToClickedSlide
         onTransitionEnd={(swiper) => handleSlide(swiper.realIndex)}
+        breakpoints={{
+          300: {
+            slidesPerView: 1
+          },
+          1200: {
+            slidesPerView: 3
+          }
+        }}
       >
         {carColors.map((color, index) => (
-          <SwiperSlide>
+          <SwiperSlide style={{height: "auto"}}>
             <S.Slide>
               <S.Card isActive={activeColor === index}>
                 <S.CarPhoto src={color.photo} />

@@ -33,6 +33,11 @@ export const SlideButton = styled.button<ButtonSide>`
   position: absolute;
   ${({ side }) => (side === "left" ? "left: 0" : "right: 0")};
   width: 3rem;
+
+  @media(max-width: 1200px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  };
 `;
 
 export const Arrow = styled.img<ArrowProps>`
@@ -45,7 +50,11 @@ export const Arrow = styled.img<ArrowProps>`
 export const Slider = styled(Swiper)`
   height: 20rem;
   margin-bottom: 6rem;
-  position: relative;
+
+  @media(max-width: 1200px) {
+    margin: 0 auto;
+    width: 20rem;
+  };
 `;
 
 export const Slide = styled.div`
@@ -53,17 +62,27 @@ export const Slide = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+
+  @media(max-width: 1200px) {
+    margin: 0 auto;
+    width: 15rem;
+  };
 `;
 
 export const Card = styled.div<CardProps>`
   align-items: center;
   background: linear-gradient(90deg, #b9baf1 0%, #e0d3ef 100%);
-  border-radius: 0.8rem;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   height: ${({ isActive }) => isActive ? "18rem" : "14rem"};
   position: relative;
-  width: ${({ isActive }) => isActive ? "20rem" : "16rem"}
+  width: ${({ isActive }) => isActive ? "20rem" : "16rem"};
+
+  @media(max-width: 1200px) {
+    height: 10rem;
+    width: 14rem;
+  };
 `;
 
 export const CarPhoto = styled.img`
@@ -72,4 +91,9 @@ export const CarPhoto = styled.img`
   right: 0;
   top: 10%;
   width: 140%;
+
+  @media(max-width: 1200px) {
+    left: 20%;
+    width: 100%;
+  };
 `;
