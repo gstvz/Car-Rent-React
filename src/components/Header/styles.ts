@@ -46,17 +46,31 @@ export const SearchParamsWrapper = styled.div`
   height: 4rem;
   justify-content: space-between;
   width: 66rem;
+
+  @media(max-width: 1200px) {
+    background: none;
+    justify-content: flex-end;
+  };
 `;
 
 export const SearchParam = styled.div`
   align-items: center;
   display: flex;
   padding: 0.6rem 2rem;
+
+  @media(max-width: 1200px) {
+    display: none;
+  };
 `;
 
 export const SearchParamsIcon = styled.img`
   height: 1.6rem;
   width: 1.3rem;
+
+  @media(max-width: 1200px) {
+    height: 1.8rem;
+    width: 1.8rem;
+  };
 `;
 
 export const SearchParamsInput = styled.input`
@@ -92,6 +106,10 @@ export const ActionsWrapper = styled.div`
   display: flex;
   gap: 1rem;
   width: 20rem;
+
+  @media(max-width: 1200px) {
+    display: none;
+  };
 `;
 
 export const ActionButton = styled.button<ActionButtonProps>`
@@ -109,4 +127,11 @@ export const ActionButton = styled.button<ActionButtonProps>`
     border-color: ${({ theme }) => theme.colors.tertiary};
     color: ${({ theme }) => theme.colors.primary};
   }
+`;
+
+export const MobileMenu = styled.img`
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(57%) sepia(34%) saturate(3624%) hue-rotate(207deg) brightness(98%) contrast(95%);
+  height: 1.8rem;
+  width: 1.8rem;
 `;

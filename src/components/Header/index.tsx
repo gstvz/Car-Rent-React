@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { icon_calendar, icon_map, icon_search } from "@assets";
+import { icon_calendar, icon_map, icon_mobile_menu, icon_search } from "@assets";
 import { useButtons } from "@shared/hooks";
 
 export const Header = () => {
@@ -33,6 +33,7 @@ export const Header = () => {
           <S.ActionButton onClick={handleActionButton}>Sign up</S.ActionButton>
           <S.ActionButton border onClick={handleActionButton}>Sign in</S.ActionButton>
         </S.ActionsWrapper>
+        <S.MobileMenu src={icon_mobile_menu} />
       </S.Container>
     </S.Header>
   );
