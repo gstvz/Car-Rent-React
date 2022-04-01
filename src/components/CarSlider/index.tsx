@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import { Navigation } from "swiper";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { icon_arrow } from "@assets";
 import { useRef } from "react";
 
@@ -25,7 +25,7 @@ export const CarSlider = ({ carColors, activeColor, handleSlide }: Props) => {
       <S.SlideButton side="right" ref={btnNext}>
         <S.Arrow src={icon_arrow} forward />
       </S.SlideButton>
-      <S.Slider
+      <Swiper
         modules={[Navigation]}
         navigation={{
           prevEl: btnPrev.current,
@@ -33,21 +33,13 @@ export const CarSlider = ({ carColors, activeColor, handleSlide }: Props) => {
         }}
         loop={true}
         centeredSlides={true}
+        slidesPerView={3}
         spaceBetween={20}
         slideToClickedSlide
         onTransitionEnd={(swiper) => handleSlide(swiper.realIndex)}
-        breakpoints={{
-          300: {
-            slidesPerView: 2,
-            spaceBetween: 0
-          },
-          1200: {
-            slidesPerView: 3
-          }
-        }}
       >
         {carColors.map((color, index) => (
-          <SwiperSlide style={{height: "auto"}}>
+          <SwiperSlide>
             <S.Slide>
               <S.Card isActive={activeColor === index}>
                 <S.CarPhoto src={color.photo} />
@@ -55,7 +47,7 @@ export const CarSlider = ({ carColors, activeColor, handleSlide }: Props) => {
             </S.Slide>
           </SwiperSlide>
         ))}
-      </S.Slider>
+      </Swiper>
     </S.Container>
   );
 };

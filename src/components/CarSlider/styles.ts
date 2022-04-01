@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Swiper } from "swiper/react";
 
 type ButtonSide = {
   side: string;
@@ -15,7 +14,7 @@ type CardProps = {
 
 export const Container = styled.div`
   display: flex;
-  margin: 0 auto;
+  padding-bottom: 2rem;
   width: 100%;
 `;
 
@@ -35,8 +34,7 @@ export const SlideButton = styled.button<ButtonSide>`
   width: 3rem;  
 
   @media (max-width: 1200px) {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    bottom: 10.5%;
     padding: 0.5rem;
   };
 `;
@@ -48,15 +46,11 @@ export const Arrow = styled.img<ArrowProps>`
   width: 2rem;
 `;
 
-export const Slider = styled(Swiper)`
-  height: 20rem;
-  margin-bottom: 6rem;
-`;
-
 export const Slide = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+  height: 100%;
   width: 100%;
 `;
 
@@ -71,8 +65,8 @@ export const Card = styled.div<CardProps>`
   width: ${({ isActive }) => (isActive ? "20rem" : "16rem")};
 
   @media (max-width: 1200px) {
-    height: ${({ isActive }) => (isActive ? "12rem" : "10rem")};
-    width: ${({ isActive }) => (isActive ? "14rem" : "12rem")};
+    height: ${({ isActive }) => (isActive ? "10rem" : "6rem")};
+    width: ${({ isActive }) => (isActive ? "12rem" : "8rem")};
   } ;
 `;
 
@@ -86,5 +80,5 @@ export const CarPhoto = styled.img`
   @media (max-width: 1200px) {
     left: 20%;
     width: 100%;
-  } ;
+  };
 `;
