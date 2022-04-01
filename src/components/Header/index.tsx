@@ -33,7 +33,7 @@ export const Header = () => {
           <S.ActionButton onClick={handleActionButton}>Sign up</S.ActionButton>
           <S.ActionButton border onClick={handleActionButton}>Sign in</S.ActionButton>
         </S.ActionsWrapper>
-        <S.MobileMenu src={icon_mobile_menu} />
+        <S.MobileMenu src={icon_mobile_menu} onClick={handleActionButton} />
       </S.Container>
     </S.Header>
   );
