@@ -32,12 +32,13 @@ export const SlideButton = styled.button<ButtonSide>`
   padding: 2rem;
   position: absolute;
   ${({ side }) => (side === "left" ? "left: 0" : "right: 0")};
-  width: 3rem;
+  width: 3rem;  
 
   @media (max-width: 1200px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  } ;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: 0.5rem;
+  };
 `;
 
 export const Arrow = styled.img<ArrowProps>`
@@ -70,8 +71,8 @@ export const Card = styled.div<CardProps>`
   width: ${({ isActive }) => (isActive ? "20rem" : "16rem")};
 
   @media (max-width: 1200px) {
-    height: 10rem;
-    width: 14rem;
+    height: ${({ isActive }) => (isActive ? "12rem" : "10rem")};
+    width: ${({ isActive }) => (isActive ? "14rem" : "12rem")};
   } ;
 `;
 
